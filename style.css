@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+#car {
+    width: 4rem;
+    height: 6rem;
+    background-color: rgb(39, 39, 255);
+    position: absolute;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+#lights {
+    height: 5%;
+    background-color: white;
+    padding: 0 1rem;
+    display: block;
+}
+#vent {
+    width: 2rem;
+    height: 100%;
+    background-color: rgb(24, 24, 24);
+    display: block;
+}
+#window {
+    background-color: rgb(82, 82, 82);
+    margin: 10% 3%;
+    height: 20%;
+    width: 94%;
+    display: block;
+}
+#backlights {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.5rem;
+    border-top: 2px solid rgb(97 97 97);
+}
+#backlights>span {
+    width: .8rem;
+    height: 100%;
+    background: red;
+}
+#backlights>div {
+    background: black;
+    width: .2rem;
+    height: .2rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    margin: 0 .1rem;
+}
