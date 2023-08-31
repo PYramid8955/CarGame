@@ -14,27 +14,41 @@ body {
 }
 #car {
     width: 4rem;
-    height: 6rem;
-    background-color: rgb(39, 39, 255);
+    height: 2rem;
     position: absolute;
     border: 1px solid transparent;
     border-radius: 0.2rem;
-    overflow: hidden;
+    top: 50%;
+    left: 5%;
+}
+#car>div {
+	width: 100%;
+	height: 6rem;
+	border: 1px solid transparent;
+    border-radius: 0.2rem;
+    position: relative;
+    top: -4rem;
+    left: 0;
+    background-color: rgb(39, 39, 255);
 }
 #lights {
     height: 5%;
     background-color: white;
-    padding: 0 1rem;
+    padding: 0 calc(1rem - 2px);
     display: block;
+    border: 1px solid transparent;
+    border-radius: .2rem .2rem 0 0;
 }
 #vent {
-    width: 2rem;
-    height: 100%;
+    width: calc(2rem - 2px);
+    height: calc(100% + 2px);
     background-color: rgb(24, 24, 24);
+    position: relative;
     display: block;
+    top: -1px;
 }
 #window {
-    background-color: rgb(82, 82, 82);
+    background: linear-gradient(180deg, rgb(82, 82, 82), black);
     margin: 10% 3%;
     height: 20%;
     width: 94%;
@@ -64,4 +78,9 @@ body {
     bottom: 0;
     transform: translateX(-50%);
     margin: 0 .1rem;
+}
+
+img {
+	width: 120%;
+	height: 100%;
 }

@@ -12,34 +12,34 @@ function moveCar() {
     let moveY = 0;
 
     if (keysPressed['w']) {
-        moveX += Math.sin(angle * (Math.PI / 180)) * 20;
-        moveY -= Math.cos(angle * (Math.PI / 180)) * 20;
+        moveX += Math.sin(angle * (Math.PI / 180)) * 3;
+        moveY -= Math.cos(angle * (Math.PI / 180)) * 3;
         isMovingBackward = false; // Moving forward
     }
 
     if (keysPressed['s']) {
-        moveX -= Math.sin(angle * (Math.PI / 180)) * 20;
-        moveY += Math.cos(angle * (Math.PI / 180)) * 20;
+        moveX -= Math.sin(angle * (Math.PI / 180)) * 3;
+        moveY += Math.cos(angle * (Math.PI / 180)) * 3;
         isMovingBackward = true; // Moving backward
 
         // Rotate the opposite way when moving backward ('s')
         if (keysPressed['a']) {
-            angle += 10;
+            angle += 2;
         }
 
         if (keysPressed['d']) {
-            angle -= 10;
+            angle -= 2;
         }
     }
 
     // Rotation logic for 'w' movement remains the same
     if (keysPressed['w'] && !keysPressed['s']) {
         if (keysPressed['a']) {
-            angle -= 10;
+            angle -= 2;
         }
 
         if (keysPressed['d']) {
-            angle += 10;
+            angle += 2;
         }
     }
 
@@ -57,7 +57,7 @@ document.addEventListener('keydown', (event) => {
     if (['a', 's', 'd', 'w'].includes(event.key)) {
         keysPressed[event.key] = true;
         if (!movementInterval) {
-            movementInterval = setInterval(moveCar, 100); // Call moveCar() every 100 milliseconds
+            movementInterval = setInterval(moveCar, 20); // Call moveCar() every 100 milliseconds
         }
     }
 });
